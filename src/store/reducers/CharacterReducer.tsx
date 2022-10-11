@@ -1,5 +1,6 @@
 import { IResponse } from "../../utils/CommonFunctions";
 import { 
+    CLEAR_SEARCH,
     GET_ALL, 
     GET_ALL_COMPLETE, 
     GET_ALL_ERROR, 
@@ -84,6 +85,13 @@ export const reducer = (state = initialState, action: IActionInterface) : IChara
                  isLoading: false,
                  characters: undefined,
                  errors: action.payload
+            }
+        case CLEAR_SEARCH:
+            return{
+                ...state,
+                isLoading: false,
+                characters: undefined,
+                errors: undefined
             }
         default:
             return state;

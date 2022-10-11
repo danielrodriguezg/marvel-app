@@ -9,6 +9,7 @@ export const GET_ALL_ERROR: string = "GET_ALL_ERROR";
 export const GET_BY_ID: string = "GET_BY_ID";
 export const GET_BY_ID_COMPLETE: string = "GET_BY_ID_COMPLETE";
 export const GET_BY_ID_ERROR: string = "GET_BY_ID_ERROR";
+export const CLEAR_SEARCH: string = "CLEAR_SEARCH";
 
 export const getAll = () : IActionInterface =>({
     type: GET_ALL,
@@ -18,4 +19,9 @@ export const getAll = () : IActionInterface =>({
 export const getByName = (payload: string) : IActionInterface =>({
     type: GET_BY_ID,
     payload
+});
+
+export const clearSearch = () : IActionInterface =>({
+    type: CLEAR_SEARCH,
+    payload: undefined
 });

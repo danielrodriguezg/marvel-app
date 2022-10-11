@@ -1,25 +1,21 @@
-import axios, {AxiosResponse} from "axios";
+import axios from "axios";
 import { getUrl } from "./GlobalConstants";
 
+interface IResult{
+  id: number,
+  name: string,
+  description: string,
+}
+
 export interface IResponse{
-  data:{
-      code: number,
-      status: string,
       data: {
         offset: number,
         limit: number,
         total: number,
         count: number,
-        results: [
-          {
-            id: number,
-            name: string,
-            description: string,
-          }
-        ]
+        results: IResult[]
       }
-    }
-  }
+}
 
 export const apiCall = (url: string, method: string) => axios({
         method,

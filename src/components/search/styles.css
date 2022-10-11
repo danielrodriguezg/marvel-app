@@ -5,7 +5,6 @@
     display: flex;
     width: 100vw;
     height: 100vh;
-    align-items: center;
     justify-content: center;
     background: linear-gradient(45deg, hsl(0, 100%, 23.5%) 40%, hsl(37, 82%, 65%) 40%);
 }
@@ -23,6 +22,8 @@
     background-position: center;
 }
 .search{
+    position: relative;
+    top: 24vh;
     width: 400px;
     text-align: center;
     box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.082);
