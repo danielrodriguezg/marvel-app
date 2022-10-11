@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getUrl } from "./GlobalConstants";
 
-interface IResult{
+export interface IResult{
   id: number,
   name: string,
   description: string,

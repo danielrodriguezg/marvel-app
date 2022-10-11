@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { IStore } from '../../store';
 import { IResponse } from '../../utils/CommonFunctions';
+import DropdownItemComponent from './dropdown-item';
 import './styles.css';
 
 const DropdownSearchComponent = ({searching}:{searching:boolean}) => {
@@ -10,7 +11,7 @@ const DropdownSearchComponent = ({searching}:{searching:boolean}) => {
         if(characters !== undefined && characters.data.count > 0){
             return <div className="dropdown">
                     {characters.data.results.map(result => {
-                    return <div key={result.id} className="item"><span>{result.name}</span></div>
+                    return <DropdownItemComponent value={result}/>
                 })}
             </div>
         }

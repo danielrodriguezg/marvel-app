@@ -1,4 +1,4 @@
-import { IResponse } from "../../utils/CommonFunctions";
+import { IResponse, IResult } from "../../utils/CommonFunctions";
 import { 
     CLEAR_SEARCH,
     GET_ALL, 
@@ -7,14 +7,10 @@ import {
     GET_BY_ID, 
     GET_BY_ID_COMPLETE, 
     GET_BY_ID_ERROR, 
-    IActionInterface 
+    IActionInterface, 
+    SELECT_CHARACTER
 } from "../actions/CharactersActions";
 
-export interface ICharacter{
-    id: number;
-    name: string;
-    description: string;
-}
 interface IComic{
 
 }
@@ -26,17 +22,14 @@ interface ISerie{
 }
 export interface ICharacterState{
     characters:  IResponse | undefined;   
-    selected: ICharacter | undefined;
+    selected: IResult | undefined;
     errors: string | undefined;
     isLoading: boolean
 }
+
 const initialState : ICharacterState= {
     characters: undefined, 
-    selected: {
-        id: 0,
-        name: "",
-        description: ""
-    },
+    selected: undefined,
     errors: undefined,
     isLoading: false
 }
@@ -91,6 +84,14 @@ export const reducer = (state = initialState, action: IActionInterface) : IChara
                 ...state,
                 isLoading: false,
                 characters: undefined,
+                errors: undefined
+            }
+        case SELECT_CHARACTER:
+            const { payload: payloadSelected } : {payload: IResult}= action;
+            return{
+                ...state,
+                isLoading: false,
+                selected: payloadSelected,
                 errors: undefined
             }
         default:
