@@ -1,0 +1,67 @@
+.container-result{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, hsl(0, 100%, 23.5%) 40%, hsl(37, 82%, 65%) 40%);
+}
+.nav-bar-result{
+    background-color: #393939;
+    height: 60px;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.196);
+    transform: translateY(-90px);
+    transition: 1s;
+}
+
+.button-volver{
+    position: absolute;
+    margin: 6px;
+    padding: 6px;
+    background: #9998983c;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 300ms;
+}
+.button-volver:hover{
+    background-color: #393939;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.329);
+    color: #ccc9c9;
+}
+.button-volver:hover .flecha{
+    border: 4px solid #9a9898;
+    border-top: 0;
+    border-right: 0;
+}
+.flecha{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 4px solid white;
+    border-top: 0;
+    border-right: 0;
+    border-radius: 3px;
+    transition: all;
+    transform: rotate(45deg);
+    margin: 5px;
+    margin-top: 6px;
+    margin-left: 8px;
+}
+.imagen-personaje{
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    border: 5px solid white;
+}
+.result-card{
+    display: flex;
+    gap: 2em;
+    background-color: #393939;
+    width: 700px;
+    border-radius: 10px;
+    margin: 5em auto;
+    padding: 1.75em;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.196);
+    color: white;
+}

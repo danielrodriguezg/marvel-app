@@ -27,13 +27,16 @@
     width: 400px;
     text-align: center;
     box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.082);
-    background: #cccccc;
+    background: #393939;
+    border-radius: 10px;
+    transition: 1s;
 }
 .search>h2{
     margin: 0 !important;
     margin-top: 30px;
     padding: 0.5em;
     font-size: 20px;
+    color: white;
 }
 .search>.search-input{
     padding: 12px 20px;

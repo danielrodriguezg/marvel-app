@@ -24,7 +24,7 @@ export function* searchAllCharacters(){
 }
 export function* searchByName(action : any){
     try {
-        const { data } = yield* call(apiCall, `characters?nameStartsWith=${action.payload}&limit=7`, "GET");
+        const { data } = yield* call(apiCall, `characters?nameStartsWith=${action.payload}&limit=9`, "GET");
         yield put({ type: GET_BY_ID_COMPLETE, payload: data});
     } catch (error) {
         if (axios.isAxiosError(error)) {
