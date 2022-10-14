@@ -7,6 +7,7 @@
     height: 100vh;
     justify-content: center;
     background: linear-gradient(45deg, hsl(0, 100%, 23.5%) 40%, hsl(37, 82%, 65%) 40%);
+    overflow: hidden;
 }
 .items-search{
     text-align: center;
@@ -20,6 +21,8 @@
     background-size: 200px 100px;
     background-repeat: no-repeat;
     background-position: center;
+    transform: translateY(-500px);
+    transition: 1s;
 }
 .search{
     position: relative;
@@ -30,6 +33,7 @@
     background: #393939;
     border-radius: 10px;
     transition: 1s;
+    transform: translateY(1300px);
 }
 .search>h2{
     margin: 0 !important;

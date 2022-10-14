@@ -10,7 +10,15 @@ const DropdownItemComponent = ({ value }:{ value:IResult }) => {
 
     const handleOnClick = () => {
         dispatch(selectCharacter(value));
-        navigate('/detail');
+        const search = document.getElementById('search');
+        if(search != undefined){
+            search!.style.transform = "translateX(-1300px)";
+        }
+        const logo = document.getElementById('logo');
+        if(logo != undefined){
+            logo!.style.transform = "translateY(-500px)";
+        }
+        setTimeout(() => navigate('/detail'), 700);
     }
 
     return <div onClick={() => handleOnClick()} key={value.id} className="item"><span>{value.name}</span></div>;
