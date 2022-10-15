@@ -13,10 +13,12 @@ const ResultPageComponent = () => {
             let navBar =document.getElementById('nav-bar');
             if(navBar != undefined){
                 navBar!.style.transform = "translateY(0px)";
+                navBar!.style.opacity = "1";
             }
             let resultCard = document.getElementById('result-card');
             if(resultCard != undefined){
                 resultCard!.style.transform = "translateX(0)";
+                resultCard!.style.opacity = "1";
             }
         }, 300);
         if(character === undefined){
@@ -26,10 +28,19 @@ const ResultPageComponent = () => {
         }
     })
     const goBack = () => {
-        //no se porqué, pero al redirigir inmediatamente, no se ejecuta el useEffect del componente de busqueda 🙊
+        let navBar =document.getElementById('nav-bar');
+            if(navBar != undefined){
+                navBar!.style.transform = "translateY(-100px)";
+                navBar!.style.opacity = "0";
+            }
+        let resultCard = document.getElementById('result-card');
+        if(resultCard != undefined){
+                resultCard!.style.transform = "translateX(-100px)";
+                resultCard!.style.opacity = "0";
+        }
         setTimeout(() => {
             navigate('/');
-        }, 10);
+        }, 1000);
     }
     return <div>
         <div className="container-result">

@@ -21,7 +21,8 @@
     background-size: 200px 100px;
     background-repeat: no-repeat;
     background-position: center;
-    transform: translateY(-500px);
+    transform: translateY(-100px);
+    opacity: 0;
     transition: 1s;
 }
 .search{
@@ -33,7 +34,8 @@
     background: #393939;
     border-radius: 10px;
     transition: 1s;
-    transform: translateY(1300px);
+    opacity: 0;
+    transform: translateY(100px);
 }
 .search>h2{
     margin: 0 !important;

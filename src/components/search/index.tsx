@@ -29,11 +29,14 @@ const SearchComponent = () => {
         const inputSearch = document.getElementById('search');
         if(inputSearch != undefined){
             inputSearch!.style.transform = "translateY(0px)";
+            inputSearch!.style.opacity = "1";
+
         }
 
         const logo = document.getElementById('logo');
         if(logo != undefined){
             logo!.style.transform = "translateY(0px)";
+            logo!.style.opacity = "1";
         }
         
         const listener = (event: KeyboardEvent) => {
