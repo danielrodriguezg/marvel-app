@@ -1,9 +1,4 @@
-import { IResult } from "../../utils/CommonFunctions";
-
-export interface IActionInterface{
-    type: string,
-    payload: any
-}
+import { IActionInterface, IResultCharacters } from "../../utils/ResponsesInterfaces";
 
 export const GET_ALL: string = "GET_ALL";
 export const GET_ALL_COMPLETE: string = "GET_ALL_COMPLETE";
@@ -29,7 +24,7 @@ export const clearSearch = () : IActionInterface =>({
     payload: undefined
 });
 
-export const selectCharacter = (payload: IResult) : IActionInterface =>({
+export const selectCharacter = (payload: IResultCharacters) : IActionInterface =>({
     type: SELECT_CHARACTER,
     payload
 })

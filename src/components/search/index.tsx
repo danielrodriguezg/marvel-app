@@ -41,7 +41,6 @@ const SearchComponent = () => {
         
         const listener = (event: KeyboardEvent) => {
             if (event.code === "Enter" || event.code === "NumpadEnter") {
-                console.log("enter")
                 event.preventDefault();
                 searchAction();
             }

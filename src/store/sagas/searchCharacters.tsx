@@ -35,7 +35,7 @@ export function* searchByName(action : any){
     }
 }
 
-export default function* search(){
+export default function* searchCharacters(){
     yield* takeLatest(GET_ALL, searchAllCharacters);
     yield* takeLatest(GET_BY_ID, searchByName);
 }

@@ -1,11 +1,11 @@
 import { useSelector } from 'react-redux';
 import { IStore } from '../../store';
-import { IResponse } from '../../utils/CommonFunctions';
+import { IResponseCharacters } from '../../utils/ResponsesInterfaces';
 import DropdownItemComponent from './dropdown-item';
 import './styles.css';
 
 const DropdownSearchComponent = ({searching}:{searching:boolean}) => {
-    const characters = useSelector((state: IStore) :IResponse|undefined=>  state.characterReducer.characters);
+    const characters = useSelector((state: IStore) :IResponseCharacters|undefined=>  state.characterReducer.characters);
     const isLoading = useSelector((state: IStore) => state.characterReducer.isLoading);
     const MapResult =() => {
         if(characters !== undefined && characters.data.count > 0){

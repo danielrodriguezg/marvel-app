@@ -1,4 +1,4 @@
-import { IResponse, IResult } from "../../utils/CommonFunctions";
+import { IActionInterface, IResponseCharacters, IResultCharacters } from "../../utils/ResponsesInterfaces";
 import { 
     CLEAR_SEARCH,
     GET_ALL, 
@@ -7,22 +7,12 @@ import {
     GET_BY_ID, 
     GET_BY_ID_COMPLETE, 
     GET_BY_ID_ERROR, 
-    IActionInterface, 
     SELECT_CHARACTER
 } from "../actions/CharactersActions";
 
-interface IComic{
-
-}
-interface IEvent{
-
-}
-interface ISerie{
-
-}
 export interface ICharacterState{
-    characters:  IResponse | undefined;   
-    selected: IResult | undefined;
+    characters:  IResponseCharacters | undefined;   
+    selected: IResultCharacters | undefined;
     errors: string | undefined;
     isLoading: boolean
 }
@@ -31,7 +21,7 @@ const initialState : ICharacterState= {
     characters: undefined, 
     selected: undefined,
     errors: undefined,
-    isLoading: false
+    isLoading: true
 }
 
 export const reducer = (state = initialState, action: IActionInterface) : ICharacterState => {
@@ -43,7 +33,7 @@ export const reducer = (state = initialState, action: IActionInterface) : IChara
                 errors: undefined
            } 
         case GET_ALL_COMPLETE:
-           const { payload: payloadAll }: {payload:IResponse} = action;
+           const { payload: payloadAll }: {payload:IResponseCharacters} = action;
            return{
                 ...state,
                 isLoading: false,
@@ -65,7 +55,7 @@ export const reducer = (state = initialState, action: IActionInterface) : IChara
                  errors: undefined
             } 
          case GET_BY_ID_COMPLETE:
-            const { payload: payloadId } : {payload: IResponse}= action;
+            const { payload: payloadId } : {payload: IResponseCharacters}= action;
             return{
                  ...state,
                  isLoading: false,
@@ -87,7 +77,7 @@ export const reducer = (state = initialState, action: IActionInterface) : IChara
                 errors: undefined
             }
         case SELECT_CHARACTER:
-            const { payload: payloadSelected } : {payload: IResult}= action;
+            const { payload: payloadSelected } : {payload: IResultCharacters}= action;
             return{
                 ...state,
                 isLoading: false,

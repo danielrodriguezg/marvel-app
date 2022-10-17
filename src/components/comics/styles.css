@@ -1,0 +1,30 @@
+.content>.fade-in{
+    background-color: #393939;
+    color: white;
+    border-radius: 10px;
+    margin: 10em 3em;
+    text-align: justify;
+    opacity: 0;
+    transition: 1s;
+    display: flex;
+}
+.left{
+    transform: translateX(-100px);
+    flex-direction: row-reverse;
+}
+.left img{
+    border-radius: 0px 10px 10px 0;
+}
+.right{
+    transform: translateX(100px);
+}
+.right img{
+    border-radius: 10px 0 0 10px;
+}
+.in-view{
+    opacity: 1 !important;
+    transform: translateX(0);
+}
+.comic-description{
+    padding: 2em;
+}

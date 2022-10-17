@@ -5,7 +5,7 @@
     width: 100vw;
     height: 100vh;
     background: linear-gradient(45deg, hsl(0, 100%, 23.5%) 40%, hsl(37, 82%, 65%) 40%);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .nav-bar-result{
     background-color: #393939;
@@ -16,6 +16,9 @@
     transition: 1s;
     gap: 2em;
     display: flex;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
 }
 h3{
     color: white;
@@ -58,22 +61,37 @@ h3{
     margin-left: 8px;
 }
 .imagen-personaje{
-    width: 160px;
-    height: 160px;
-    border-radius: 100%;
-    border: 5px solid white;
+    width: 300px;
+    border-right: 1px solid black;
+    border-radius: 10px 0 0 10px;
 }
+
 .result-card{
     display: flex;
     gap: 2em;
     background-color: #393939;
     width: 700px;
     border-radius: 10px;
-    margin: 5em auto;
-    padding: 1.75em;
+    margin: 8em auto;
     box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.196);
     color: white;
     transform: translateX(100px);
     opacity: 0;
+    transition: 1s;
+}
+
+.content{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.title-comics{
+    width: 700px;
+    margin: auto;
+    color: #393939;
+    position: sticky;
+    top: 3em;
+    opacity: 0;
+    transform: translateY(100px);
     transition: 1s;
 }

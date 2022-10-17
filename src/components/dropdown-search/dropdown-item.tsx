@@ -1,10 +1,10 @@
 import { useDispatch } from "react-redux";
 import { selectCharacter } from "../../store/actions/CharactersActions";
-import { IResult } from "../../utils/CommonFunctions";
+import { IResultCharacters } from "../../utils/ResponsesInterfaces";
 import { useNavigate } from 'react-router-dom';
 import './styles.css';
 
-const DropdownItemComponent = ({ value }:{ value:IResult }) => {
+const DropdownItemComponent = ({ value }:{ value:IResultCharacters }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
