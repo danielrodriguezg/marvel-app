@@ -55,6 +55,11 @@ const ResultPageComponent = () => {
                 titleComics!.style.transform = "translateX(0)";
                 titleComics!.style.opacity = "1";
             }
+            let titleResult = document.getElementById('title-results');
+            if(titleResult != undefined){
+                titleResult!.style.transform = "translateX(0)";
+                titleResult!.style.opacity = "1";
+            }
         }, 300);
         if(character === undefined){
             setTimeout(() => {
@@ -76,8 +81,13 @@ const ResultPageComponent = () => {
         }
         let titleComics = document.getElementById('title-comics');
         if(titleComics != undefined){
-            titleComics!.style.transform = "translateY(100px)";
+            titleComics!.style.transform = "translateX(-100px)";
             titleComics!.style.opacity = "0";
+        }
+        let titleResults = document.getElementById('title-results');
+        if(titleResults != undefined){
+            titleResults!.style.transform = "translateX(-100px)";
+            titleResults!.style.opacity = "0";
         }
         setTimeout(() => {
             navigate('/');
@@ -102,7 +112,7 @@ const ResultPageComponent = () => {
                 <div><a className="button-volver" onClick={() => goBack()}><span className="flecha"></span></a></div>
                 <div><h3>Volver</h3></div>
             </div>
-            
+            <h1 id= "title-results" className="title-results">Resultados</h1>
             <header className="result-card" id="result-card">
                 {character === undefined ? 
                     <h1 style={{paddingLeft: "50px"}}>No se ha buscado personaje 😞</h1>
@@ -110,7 +120,7 @@ const ResultPageComponent = () => {
                     <>
                         <img className="imagen-personaje" src={character?.thumbnail.path+"/portrait_incredible."+character?.thumbnail.extension} />
                         <div className="description">
-                            <h2>{character?.name}</h2>
+                            <h2><b>Personaje:</b> {character?.name}</h2>
                             <p>{character?.description}</p>
                         </div>
                     </>

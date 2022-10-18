@@ -95,3 +95,13 @@ h3{
     transform: translateY(100px);
     transition: 1s;
 }
+.title-results{
+    position: relative;
+    width: 700px;
+    margin: auto;
+    top: 3em; 
+    color: #393939;
+    transition: 1s;
+    opacity: 0;
+    transform: translateX(100px);
+}
