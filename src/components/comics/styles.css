@@ -27,4 +27,5 @@
 }
 .comic-description{
     padding: 2em;
+    scroll-snap-align: center;
 }

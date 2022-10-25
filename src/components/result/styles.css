@@ -5,7 +5,8 @@
     width: 100vw;
     height: 100vh;
     background: linear-gradient(45deg, hsl(0, 100%, 23.5%) 40%, hsl(37, 82%, 65%) 40%);
-    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 .nav-bar-result{
     background-color: #393939;
@@ -78,11 +79,13 @@ h3{
     transform: translateX(100px);
     opacity: 0;
     transition: 1s;
+    scroll-snap-align: center;
 }
 
 .content{
     width: 800px;
     margin: 0 auto;
+    scroll-snap-align: start;
 }
 
 .title-comics{
