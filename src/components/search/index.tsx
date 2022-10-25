@@ -81,6 +81,7 @@ const SearchComponent = () => {
                     id='search-input'
                     type="text"
                     placeholder='Ej. Iron Man'
+                    autoComplete="off"
                     onChange={e => {setSearch(e.target.value)}}
                 ></input>
                 <DropdownSearchComponent searching={search.length > 2}/>
